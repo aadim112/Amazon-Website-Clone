@@ -1,0 +1,695 @@
+<html>
+    <head>
+        <title>Amazone clone</title>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAA5vX/AP///wDK6f8AAKf/AIaGhAAdHRwAE63/AGZmZQB2dnYAVlZUAJWVlACf2v8ABQUDAPL6/wC75P8Ay+r/AJSUkwDZ2dkAAKj/AObm5gAeHhwAMjIwAFZWVQDz8/MABQUEAKKiogCQ1f8AAKf+AHLJ/wBVVVQA8vLyAK3f/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgICAgICAgICAgIAAAACAgIbBAQEEwQEAgICAgACAg4EExACAgICIBwHDAICAg8dAgICAgICAgICAgIBAgICAgICCg0FAgIXAgIDAgICAgICGRkZDRkWDRkCAgICAgICERkZBgIZDRkZAgICAgICAggNGQICAhkZFwICAgICAgIfDRkaAgIZDRcCAgICAgICAhkZGRkKGRkeAgICAgICAgICFBkZGRkZFwICAgICAgICGBECAgIZGRcCAgICAgICAhkZCQISGQ0RAgICAgICAgIVGRkZGRkNAgICAgIAAgICAgsNGRkNAgICAgIAAAACAgICAgICAgICAgIAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAMADAAA=" rel="icon" type="image/x-icon">
+    </head>
+    <style>
+        .header{
+            width: 100%;
+            height: 50px;
+            background-color: #0F1111;
+            display: flex;
+        }
+        .logo{
+            width: 100px;
+            height: 50px;
+            margin-left: 35px;
+            cursor: pointer;
+        }
+        .hed_add{
+            margin-left: 20px;
+            display: flex;
+            cursor: pointer;
+        }
+        .loc_logo{
+            width: 30px;
+            height: 50px;
+        }
+        .loc_det{
+            width: 100px;
+            height: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .seach_bar{
+            width: 800px;
+            height: 40px;
+            margin-top: 5px;
+            margin-left: 30px;
+            border-radius: 5px;
+            display: flex;
+            background-color: white;
+        }
+        .drp_list{
+            width: 50px;
+            height: 40px;
+            background-color: #e6e6e6;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-color: black;
+            cursor: pointer;
+        }
+        .srch_input{
+            width: 650px;
+            height: 39px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-width: 0px;
+            margin-top: 0.5px;
+        }
+        .srch_img{
+            width: 50px;
+            height: 40px;
+            cursor:pointer;
+        }
+        .src_but{
+            width: 50px;
+            height: 40px;
+            background-color: #febd69;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            cursor: pointer;
+        }
+        .categories{
+            width: 100%;
+            height: 40px;
+            background-color: #232f3e;
+            display: flex;
+        }
+        .navagation_bar{
+            width: 60px;
+            height: 40px;
+            display: flex;
+        }
+        .bt{
+            margin-left: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: transparent;
+            border-width: 0px;
+            font-size: 15px;
+        }
+        .language{
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: flex;
+        }
+        .acc_detail{
+            width: 110px;
+            height: 50px;
+            margin-left: 20px;
+        }
+        .cart{
+            width: 100px;
+            height: 50px;
+            margin-left: 10px;
+        }
+        .main{
+            width: 100%;
+            height: 750px;
+            background-color: #e3e6e6;
+        }
+        .hero_sec{
+            width: 100%;
+            height: 600px;
+            background-image: url(poster.jpg);
+            background-size: cover;
+            display: flex;
+        }
+        .b1{
+            width:320px;
+            height:450px;
+            background-color: white;
+            margin-left: 28px;
+            margin-top: 250px;
+            display: block;
+            padding: 10px;
+        }
+        .b2{
+            width:320px;
+            height:150px;
+            background-color: white;
+            margin-left: 28px;
+            margin-top: 250px;
+            display: block;
+            padding: 10px;
+            }
+            .b2{
+            width:320px;
+            height:150px;
+            background-color: white;
+            margin-left: 28px;
+            margin-top: 250px;
+            display: block;
+            padding: 10px;
+            }
+        .items{
+            display:flex;
+        }
+        .video_promotion{
+            width: 100%;
+            height: 500px;
+            background-color: #e3e6e6;
+            display: flex;
+        }
+        .video_ad{
+            width: 700px;
+            height: 450px;
+            background-color: #75b2bd;
+            margin-top: 25px;
+            margin-left: 30px;
+        }
+        .d3{
+            width: 320px;
+            height: 430px;
+            background-color: white;
+            margin-top: 25px;
+            margin-left: 30px;
+            padding: 10px;
+        }
+        .d4{
+            width: 320px;
+            height: 430px;
+            background-color: white;
+            margin-top: 25px;
+            margin-left: 30px;
+            padding: 10px;
+        }
+        .slide_div{
+            width: 100%;
+            height: 350px;
+            background-color: #e3e6e6;
+        }
+        .slide_menu{
+            width: 93%;
+            height: 280px;
+            background-color: white;
+            margin-left: 30px;
+            padding: 20px;
+        }
+        .heading{
+            display: flex;
+        }
+        .top_picks{
+            display: flex;
+            overflow: auto;
+            border-radius: 6px;
+        }
+        .affiliate_product{
+            width: 100%;
+            height: 450px;
+            background-color: #e3e6e6;
+        }
+        .affiliate_banner{
+            width: 1400px;
+            height: 350px;
+            margin-left: 30px;
+            background-color: white;
+            padding: 20px;
+        }
+        .promotion{
+            display: flex;
+            overflow:scroll;
+        }
+        .cont{
+            width: 400px;
+            height:300px;
+            background-color: #75b2bd;
+            border-radius: 20px;
+            margin-left: 30px;
+        }
+        .v_cont{
+            width: 400px;
+            height:230px;
+            background-color:#cc0c39;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .v_des{
+            width: 400px;
+            height: 70px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #232f3e;
+            display: flex;
+        }
+        .profile_pic{
+            width:100px;
+            height:70px;
+            border-bottom-left-radius: 20px;
+        }
+        .dis{
+            width:300px;
+            height: 70px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+    <body>
+        <!--This is the container header-->
+        <div class="header">
+
+            <!--For logo of the amzon website-->
+            <div class="logo">
+                <center>
+                <img src="amazon_logo2.png" style="width: 100px; height: 50px"/>
+                </center>
+            </div>
+            <!--End of Amzon Logo------------------------------>
+
+            <!--Address Tab on header-->
+            <div class="hed_add">
+                <div class="loc_logo">
+                    <img  style="width: 30px;height:30px;margin-top:18px" src="location.png"/>
+                </div>
+                <div class="loc_det">
+                    <h1 style="font-size: 10px;color:grey">Deliver to,Surname</h1>
+                    <h1 style="font-size: 15px;font-family: Arial, Helvetica, sans-serif;">Parola,425111</h1>
+                </div>
+            </div>
+            <!--End of Header Address--------------------------->
+
+            <!--Strt of Search Bar------------->
+            <div class="seach_bar">
+                <div class="drp_list">
+                    <select class="drp_list">
+                        <option value="all">All</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="plc_hld">
+                    <input type="text" placeholder="Search Amazon.in" class="srch_input" onclick="bar_ani" id="placeholder"/>
+                </div>
+                <div class="srch_img">
+                    <center>
+                    <img src="search_img.png" style="width: 25px;height:25px;margin-top:8px"/>
+                    </center>
+                </div>
+                <div class="src_but">
+                    <center>
+                        <img style="width: 25px; height:25px ;margin-top:7.5px;" src="search.png"/>
+                    </center>
+                </div>
+            </div>
+            <!--End of Search bar---------------->
+
+            <!--Language select Area------------------------>
+            <div class="language">
+                <div class="cont_logo">
+                    <img src="flag.png" style="width: 18px;height:12px;margin-top:15px;"/>
+                </div>
+                <select style="background-color: transparent;color:white;text-decoration:bold;border-width:0px">
+                    <option>EN</option>
+                </select>
+            </div>
+            <!--End of Language Select Area------------------>
+
+            <!--Account Details Are-------------------------->
+            <div class="acc_detail">
+                <h1 style="font-size: 10px;color:white;font-family:sans-serif;margin-left:5px;cursor:pointer">Hello, Username</h1>
+                <select style="color: white;font-size:15px;background-color:transparent;border-width:0px;cursor:pointer">
+                   <option><b>Account & Lists</b></option>
+                </select>
+            </div>
+            <!--Header Account Details Area End ------------------->
+
+            <div class="order_return" style="margin-left: 25px;">
+                <h1 style="color: white;font-size:10px;">Returns</h1>
+                <b style="color: white;font-size:15px">&Orders</b>
+            </div>
+
+            <div class="cart" style="display: flex;">
+                <img src="cart2.png" style="width: 40px;height:40px"/>
+                <h1 style="font-size: 20px;color:white">Cart</h1>
+            </div>
+        </div>
+        <!---End of Header ------------------------------------------------------------------------------------------->
+
+        <!--Start of catergories-------------------------------------------------------------------------------------->
+        <div class="categories">
+            <div class="navagation_bar">
+                <img src="navigation_menu.png" style="width: 50px; height:40px"/>
+                <h1 style="color: white;font-size:15px;font-family:Arial, Helvetica, sans-serif">All</h1>
+            </div>
+            <button class="bt"> Customer Service</button>
+            <button class="bt">Today's Deal</button>
+            <button class="bt"> Amazon MiniTv</button>
+            <button class="bt">Sell</button>
+            <button class="bt">AmazonPay</button>
+            <button class="bt">Gift Card</button>
+            <button class="bt">Buy Again</button>
+            <button class="bt">Fasion</button>
+            <button class="bt">Gift Ideas</button>
+            <button class="bt">Cupons</button>
+        </div>
+        <!--ENd of the Categories--------------------------------------------------------------------------------------->
+        <div class="main">
+            <div class="hero_sec">
+
+                <!---The section for prevelaged items--------------------------------->
+                <div class="b1">
+                    <h1 style="font-size: 20px;font-family:Arial, Helvetica, sans-serif;margin-left:20px">Keep Shoping For</h1>
+                    <div class="items" style="margin-top: 40px;">
+                        <div class="i1" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Men's sneakers</h1>
+                            </div>
+                        </div>
+                        <div class="i2" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product1.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">PC game headsets</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items" style="margin-top:40px;">
+                        <div class="i1" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product2.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Skechers Mens Max Pr</h1>
+                            </div>
+                        </div>
+                        <div class="i2" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product3.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Sparx Mens Sd0734g</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" style="margin-left: 20px;color:#75b2bd;text-decoration:none">see more</a>
+                </div>
+                <!--End of previllaged items------------------------------------------->
+
+                 <!---The section for prevelaged items--------------------------------->
+                 <div class="b1">
+                    <h1 style="font-size: 20px;font-family:Arial, Helvetica, sans-serif;margin-left:20px">Pick up where you left off</h1>
+                    <div class="items" style="margin-top: 40px;">
+                        <div class="i1" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product4.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Men's sneakers</h1>
+                            </div>
+                        </div>
+                        <div class="i2" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product1.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">PC game headsets</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items" style="margin-top:40px;">
+                        <div class="i1" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product7.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Skechers Mens Max Pr</h1>
+                            </div>
+                        </div>
+                        <div class="i2" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product5.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Sparx Mens Sd0734g</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" style="margin-left: 20px;color:#75b2bd;text-decoration:none">see more</a>
+                </div>
+                <!--End of previllaged items------------------------------------------->
+                 <!---The section for prevelaged items--------------------------------->
+                 <div class="b1">
+                    <h1 style="font-size: 20px;font-family:Arial, Helvetica, sans-serif;margin-left:20px">Categories to explore</h1>
+                    <div class="items" style="margin-top: 40px;">
+                        <div class="i1" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Men's sneakers</h1>
+                            </div>
+                        </div>
+                        <div class="i2" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product1.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">PC game headsets</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items" style="margin-top:40px;">
+                        <div class="i1" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product7.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Skechers Mens Max Pr</h1>
+                            </div>
+                        </div>
+                        <div class="i2" style="width: 130px;height:150px;background-color:#f7f7f7;margin-left:20px">
+                            <div><img style="width: 130px;height:130px;object-fit:contain" src="product6.jpg"/></div>
+                            <div class="ob_details">
+                                <h1 style="font-size: 10px;font-family:Arial, Helvetica, sans-serif">Sparx Mens Sd0734g</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" style="margin-left: 20px;color:#75b2bd;text-decoration:none">see more</a>
+                </div>
+                <!--End of previllaged items------------------------------------------->
+                 <!---The section for prevelaged items--------------------------------->
+                 <div class="b2">
+                    <div class="extra" style="display: flex;">
+                        <div class="descri">
+                            <h1 style="font-size: 20px;">Launch your brand on Amazon</h1>
+                            <h1 style="font-size: 15px; font-family:Arial, Helvetica, sans-serif;color:#75b2bd;text-decoration:wavy;margin-top:60px">Start Selling today</h1>
+                        </div>
+
+                        <div>
+                        <img src="small poster.jpg" width="110px;height:0px"/>
+                        </div>
+                    </div>
+                    <div class="special">
+
+                    </div>
+                </div>
+                <!--End of previllaged items------------------------------------------->
+            </div>
+        </div>
+        <div class="video_promotion">
+            <div class="video_ad">
+                <iframe width="700px" style="border-width: 0px;" height="450px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+            </div>
+            <div class="d3">
+                <h1 style="font-size: 20px;font-family:Arial, Helvetica, sans-serif">Bestselling headphones starts at ₹199</h1>
+                <img src="product8.jpg" style="width: 290px;height: 300px;object-fit:contain;margin-left:15px;cursor:pointer"/>
+                <h1 style="font-size: 15px;color:#75b2bd;font-family:Arial, Helvetica, sans-serif">see more</h1>
+            </div>
+            <div class="d4">
+                <h1 style="font-size: 20px;font-family:Arial, Helvetica, sans-serif">Starting ₹99 | All your home improvement needs</h1>
+                
+            </div>
+        </div>
+        <div class="slide_div">
+            <div class="slide_menu">
+                <div class="heading">
+                    <h1 style="font-size: 25px;font-family:Arial, Helvetica, sans-serif">Today's Hot Deals</h1>
+                </div>
+                <div class="top_picks">
+                    <div class="i1" style="margin-left: 30px;">
+                        <img src="product11.jpg" style="width: 160px;height:160px;background-color:#f7f7f7;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i2" style="margin-left: 30px;">
+                        <img src="product12.jpg" style="width: 160px;height:160px;background-color:#f7f7f7;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i3" style="margin-left: 30px;">
+                        <img src="product13.jpg" style="width: 160px;height:160px;background-color:#f7f7f7;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i4" style="margin-left: 30px;">
+                        <img src="product14.jpg" style="width: 160px;height:160px;background-color:#f7f7f7;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i5" style="margin-left: 30px;">
+                        <img src="product11.jpg" style="width: 160px;height:160px;background-color:#f7f7f7;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i6" style="margin-left: 30px;">
+                        <img src="product10.jpg" style="width: 160px;height:160px;background-color:#f7f7f7;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i7" style="margin-left: 30px;">
+                        <img src="product1.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i8" style="margin-left: 30px;">
+                        <img src="product6.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i9" style="margin-left: 30px;">
+                        <img src="product11.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i10" style="margin-left: 30px;">
+                        <img src="product8.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i11" style="margin-left: 30px;">
+                        <img src="product4.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide_div">
+            <div class="slide_menu">
+                <div class="heading">
+                    <h1 style="font-size: 25px;font-family:Arial, Helvetica, sans-serif">You might also like</h1>
+                </div>
+                <div class="top_picks">
+                    <div class="i1" style="margin-left: 30px;">
+                        <img src="product11.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i2" style="margin-left: 30px;">
+                        <img src="product12.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i3" style="margin-left: 30px;">
+                        <img src="product13.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i4" style="margin-left: 30px;">
+                        <img src="product14.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i5" style="margin-left: 30px;">
+                        <img src="product11.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i6" style="margin-left: 30px;">
+                        <img src="product10.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i7" style="margin-left: 30px;">
+                        <img src="product1.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i8" style="margin-left: 30px;">
+                        <img src="product6.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i9" style="margin-left: 30px;">
+                        <img src="product11.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i10" style="margin-left: 30px;">
+                        <img src="product8.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                    <div class="i11" style="margin-left: 30px;">
+                        <img src="product4.jpg" style="width: 160px;height:160px;background-color:white;object-fit:contain"/>
+                        <div style="width:75px;height:20px;background-color:#cc0c39;border-radius:2px"><h1 style="font-size:15;font-family:serif;color:white;text-align:center;">Up to 50% off</h1></div>
+                        <h1 style="font-size: 10px;">MB-Vite Daily Multivitamin</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="affiliate_product">
+            <div class="affiliate_banner">
+                <h1 style="font-size: 20px;color:#cc0c39">Videos for products that you have viewed</h1>
+                <div class="promotion">
+                    <!--------Container for Brand Promotion----------->
+                    <div class="cont">
+                        <div class="v_cont">
+                            <iframe width="400" height="300" style="border-width: 0px;border-top-right-radius:20px;border-top-left-radius:20px;border-bottom-left-radius:20px;border-bottom-right-radius:20px" height="450px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            </iframe>
+                        </div>
+                        <div class="v_des">
+                            <div class="profile_pic">
+                                <img src="akhad.jpeg" style="width: 40px;height:40px;border-radius:50%;margin-top:10px;margin-left:20px"/>
+                            </div>
+                            <div class="dis">
+                                <h1 style="font-size: 15px;font-family:Arial, Helvetica, sans-serif;color:white;margin-left:30px">Amazon Wireless Sound Bar</h1>
+                                <p style="margin-left: 20px;color:white;font-size:9px">Aditi Gupta Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---End of container for brand Promotion----------->
+
+                    <!--------Container for Brand Promotion----------->
+                    <div class="cont">
+                        <div class="v_cont">
+                            <iframe width="400" height="300" style="border-width: 0px;border-top-right-radius:20px;border-top-left-radius:20px;border-bottom-left-radius:20px;border-bottom-right-radius:20px" src="https://www.youtube.com/embed/sW_DwcERmBE?si=mP1xP9L3Fpr-4-0i&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="v_des">
+                            <div class="profile_pic">
+                                <img src="aditigupta.jpeg" style="width: 40px;height:40px;border-radius:50%;margin-top:10px;margin-left:20px"/>
+                            </div>
+                            <div class="dis">
+                                <h1 style="font-size: 15px;font-family:Arial, Helvetica, sans-serif;color:white;margin-left:30px">Amazon Wireless Sound Bar</h1>
+                                <p style="margin-left: 20px;color:white;font-size:9px">Aditi Gupta Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---End of container for brand Promotion----------->
+
+                    <!--------Container for Brand Promotion----------->
+                    <div class="cont">
+                        <div class="v_cont">
+                            <iframe width="400" height="300" style="border-width: 0px;border-top-right-radius:20px;border-top-left-radius:20px;border-bottom-left-radius:20px;border-bottom-right-radius:20px" src="https://www.youtube.com/embed/BzRm5FyKg6E?si=81z_b6FTOUdFSyOB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="v_des">
+                            <div class="profile_pic">
+                                <img src="akhad.jpeg" style="width: 40px;height:40px;border-radius:50%;margin-top:10px;margin-left:20px"/>
+                            </div>
+                            <div class="dis">
+                                <h1 style="font-size: 15px;font-family:Arial, Helvetica, sans-serif;color:white;margin-left:30px">Amazon Wireless Sound Bar</h1>
+                                <p style="margin-left: 20px;color:white;font-size:9px">Aditi Gupta Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---End of container for brand Promotion----------->
+
+                    <!--------Container for Brand Promotion----------->
+                    <div class="cont">
+                        <div class="v_cont">
+                            <iframe width="400" height="230" style="border-width: 0px;border-top-right-radius:20px;border-top-left-radius:20px" height="450px" src="https://www.youtube.com/embed/SrYkrsBzbOQ?si=fmWhW3zelQtBZYJj&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="v_des">
+                            <div class="profile_pic">
+                                <img src="aditigupta.jpeg" style="width: 40px;height:40px;border-radius:50%;margin-top:10px;margin-left:20px"/>
+                            </div>
+                            <div class="dis">
+                                <h1 style="font-size: 15px;font-family:Arial, Helvetica, sans-serif;color:white;margin-left:30px">Amazon Wireless Sound Bar</h1>
+                                <p style="margin-left: 20px;color:white;font-size:9px">Aditi Gupta Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!---End of container for brand Promotion----------->
+
+                    
+                </div>
+            </div>
+        </div>  
+    </body>
+</html>
